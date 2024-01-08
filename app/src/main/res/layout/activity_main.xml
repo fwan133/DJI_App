@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:gravity="center|center_horizontal|center_vertical">
+
+        <TextView
+            android:id="@+id/TxV_ConnectionStatus"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Status: No Product Connected"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/Bt_FlightRoutePlanning"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Flight Route Planning"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/Bt_ImageDataCollection"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Image Data Collection"
+            android:textSize="20sp"
+            android:textAllCaps="false"/>
+
+        <TextView
+            android:id="@+id/TxV_DJISDKVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DJI SDK Version: 4.11"
+            android:textSize="15sp"/>
+    </LinearLayout>
+</LinearLayout>

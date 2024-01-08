@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".ImageDataCollection">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mission Panel"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/border">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="Step 1: Load Data Collection Information"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FileName"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"/>
+                        <Spinner
+                            android:id="@+id/Sp_FileName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="15sp"/>
+                        <Button
+                            android:id="@+id/Btn_Browser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Browser"
+                            android:textSize="15sp"
+                            android:minHeight="0dp"
+                            android:textColor="@color/black"
+                            android:textAllCaps="false"/>
+                        <Button
+                            android:id="@+id/Btn_Load"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Load"
+                            android:textSize="15sp"
+                            android:minHeight="0dp"
+                            android:textColor="@color/black"
+                            android:textAllCaps="false"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="Step 2: Set Two Reference Points"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Point_1:"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center"/>
+                        <EditText
+                            android:id="@+id/EdT_Point1Latitude"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:hint="Latitude"
+                            android:textSize="15sp"
+                            android:inputType="numberSigned|numberDecimal"/>
+                        <EditText
+                            android:id="@+id/EdT_Point1Longitude"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:hint="Longitude"
+                            android:textSize="15sp"
+                            android:inputType="numberSigned|numberDecimal"/>
+                        <Button
+                            android:id="@+id/Btn_GetP1Location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="0dp"
+                            android:text="Obtain"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:textAllCaps="false"/>
+
+                        <Button
+                            android:id="@+id/Btn_SetP1Location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Set"
+                            android:textSize="15sp"
+                            android:minHeight="0dp"
+                            android:textColor="@color/black"
+                            android:textAllCaps="false"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Point_2:"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center"/>
+                        <EditText
+                            android:id="@+id/EdT_Point2Latitude"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:hint="Latitude"
+                            android:textSize="15sp"
+                            android:inputType="numberSigned|numberDecimal"/>
+                        <EditText
+                            android:id="@+id/EdT_Point2Longitude"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:hint="Longitude"
+                            android:textSize="15sp"
+                            android:inputType="numberSigned|numberDecimal"/>
+                        <Button
+                            android:id="@+id/Btn_GetP2Location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="0dp"
+                            android:text="Obtain"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:textAllCaps="false"/>
+
+                        <Button
+                            android:id="@+id/Btn_SetP2Location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Set"
+                            android:textSize="15sp"
+                            android:minHeight="0dp"
+                            android:textColor="@color/black"
+                            android:textAllCaps="false"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="Step 3: Flight Mission"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:id="@+id/Btn_HomePoint"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:minHeight="0dp"
+                            android:textAllCaps="false"
+                            android:text="Home Point"
+                            android:textSize="15sp"/>
+
+                        <Button
+                            android:id="@+id/Btn_CreateMission"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:minHeight="0dp"
+                            android:textAllCaps="false"
+                            android:text="Create"
+                            android:textSize="15sp"/>
+
+                        <Button
+                            android:id="@+id/Btn_StartMission"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:minHeight="0dp"
+                            android:textAllCaps="false"
+                            android:text="Start"
+                            android:textSize="15sp"/>
+
+                        <Button
+                            android:id="@+id/Btn_PauseMission"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:minHeight="0dp"
+                            android:textAllCaps="false"
+                            android:text="Pause"
+                            android:textSize="15sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:id="@+id/Btn_ResumeMission"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:minHeight="0dp"
+                            android:textAllCaps="false"
+                            android:text="Resume"
+                            android:textSize="15sp"/>
+
+                        <Button
+                            android:id="@+id/Btn_StopMission"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:minHeight="0dp"
+                            android:textAllCaps="false"
+                            android:text="Stop"
+                            android:textSize="15sp"/>
+
+                        <Button
+                            android:id="@+id/Btn_GoHome"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:minHeight="0dp"
+                            android:textAllCaps="false"
+                            android:text="Go Home"
+                            android:textSize="15sp"/>
+
+                        <Button
+                            android:id="@+id/Btn_Continue"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:minHeight="0dp"
+                            android:textAllCaps="false"
+                            android:text="Continue"
+                            android:textSize="15sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/videoBackground">
+                <dji.ux.widget.FPVWidget
+                    android:id="@+id/fpv_widget"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    custom:sourceCameraNameVisibility="true"/>
+
+                <RelativeLayout
+                    android:id="@+id/signal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:background="@color/dark_gray"
+                    android:orientation="horizontal">
+
+                    <dji.ux.widget.PreFlightStatusWidget
+                        android:layout_width="180dp"
+                        android:layout_height="22dp"
+                        android:layout_alignParentLeft="true"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true">
+                        <dji.ux.widget.FlightModeWidget
+                            android:layout_width="103dp"
+                            android:layout_height="22dp"/>
+
+                        <dji.ux.widget.GPSSignalWidget
+                            android:layout_width="44dp"
+                            android:layout_height="22dp"/>
+
+                        <dji.ux.widget.RemoteControlSignalWidget
+                            android:layout_width="38dp"
+                            android:layout_height="22dp"/>
+
+                        <dji.ux.widget.VideoSignalWidget
+                            android:layout_width="38dp"
+                            android:layout_height="22dp"/>
+
+                        <dji.ux.widget.BatteryWidget
+                            android:layout_width="80dp"
+                            android:layout_height="20dp"
+                            custom:excludeView="singleVoltage"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <dji.ux.widget.RemainingFlightTimeWidget
+                    android:id="@+id/remaining_flight_time"
+                    android:layout_below="@+id/signal"
+                    android:layout_height="20dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/transparent"/>
+
+                <dji.ux.widget.controls.CameraControlsWidget
+                    android:id="@+id/CameraCapturePanel"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="40dp"
+                    android:layout_height="160dp"
+                    tools:ignore="RtlHardcoded"/>
+
+                <dji.ux.panel.PreFlightCheckListPanel
+                    android:id="@+id/pre_flight_check_list"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/signal"
+                    custom:excludeItem="ESCStatus"
+                    android:visibility="gone"/>
+
+                <dji.ux.panel.CameraSettingExposurePanel
+                    android:layout_width="180dp"
+                    android:layout_alignTop="@id/CameraCapturePanel"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:layout_height="263dp"
+                    android:visibility="gone"
+                    tools:ignore="RtlHardcoded"/>
+
+                <dji.ux.panel.CameraSettingAdvancedPanel
+                    android:layout_width="180dp"
+                    android:layout_height="263dp"
+                    android:layout_alignTop="@id/CameraCapturePanel"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    tools:ignore="RtlHardcoded"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Map"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
+        <fragment
+            android:id="@+id/MissionMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.google.android.gms.maps.SupportMapFragment">
+        </fragment>
+    </LinearLayout>
+</LinearLayout>

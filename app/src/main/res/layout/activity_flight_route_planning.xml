@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data Collection Points"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Step 1: Create Key Points"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coordinate: "
+                        android:textSize="18sp"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="X"
+                        android:textSize="18sp"/>
+                    <EditText
+                        android:id="@+id/ET_X"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="18sp"/>
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="Y"
+                        android:textSize="18sp"/>
+                    <EditText
+                        android:id="@+id/ET_Y"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="18sp"/>
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="Z"
+                        android:textSize="18sp"/>
+                    <EditText
+                        android:id="@+id/ET_Z"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="0dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Type: "
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:id="@+id/RG_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="0dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/RB_L2L"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="L2L"
+                            android:textSize="18sp"
+                            android:checked="true"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/RB_L2C"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="L2C"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/RB_C2L"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="C2L"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/RB_C2C"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="C2C"
+                            android:textSize="18sp" />
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <Button
+                        android:id="@+id/Bt_New"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="0dp"
+                        android:layout_weight="1"
+                        android:text="New"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"/>
+                    <Button
+                        android:id="@+id/Bt_Delete"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="0dp"
+                        android:layout_weight="1"
+                        android:text="Delete"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"/>
+                    <Button
+                        android:id="@+id/Bt_Clean"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="0dp"
+                        android:layout_weight="1"
+                        android:text="Clean"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"/>
+                    <Button
+                        android:id="@+id/Bt_Complete"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="0dp"
+                        android:layout_weight="1"
+                        android:text="Complete"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Step 2: Create Bridge Model"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bridge Width: "
+                        android:textSize="18sp"/>
+                    <EditText
+                        android:id="@+id/ET_BridgeWidth"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="18sp"/>
+                    <Button
+                        android:id="@+id/Bt_Create"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Create"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Step 3: Define Inspection Parameters"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GSD: "
+                        android:textSize="18sp"/>
+                    <EditText
+                        android:id="@+id/ET_GSD"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="18sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[mm/pixel]  "
+                        android:textSize="18sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OVERLAP: "
+                        android:textSize="18sp"/>
+                    <EditText
+                        android:id="@+id/ET_Overlap"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="18sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[%]  "
+                        android:textSize="18sp"/>
+                    <Button
+                        android:id="@+id/Bt_Confirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Confirm"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Step 4: Calculate Images Collection Location"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FileName:"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/black"/>
+
+                    <EditText
+                        android:id="@+id/ET_FileName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="18sp"/>
+
+                    <Button
+                        android:id="@+id/Bt_Calculate"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Calculate"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"/>
+                    <Button
+                        android:id="@+id/Bt_Save"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Save"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RouteFile:"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/black"/>
+
+                    <Spinner
+                        android:id="@+id/Sp_RouteFile"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:id="@+id/Bt_Load"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Load"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"/>
+                    <Button
+                        android:id="@+id/Bt_Show"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Show"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Key Points Information"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="5dp">
+                <ScrollView
+                    android:id="@+id/SV_KeyPoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical">
+                    <TextView
+                        android:id="@+id/TV_KeyPoints"
+                        android:scrollbars="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"/>
+                </ScrollView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bridge Model and Image Capture Points"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="5dp">
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
